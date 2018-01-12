@@ -510,6 +510,7 @@ public class DockerSeleniumStarterRemoteProxy extends DefaultRemoteProxy impleme
         envVars.put("SELENIUM_MULTINODE_PORT", String.valueOf(nodePort));
         envVars.put("CHROME", "false");
         envVars.put("FIREFOX", "false");
+        envVars.put("FFMPEG_CODEC_ARGS", "-preset fast");
         return envVars;
     }
 

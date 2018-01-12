@@ -146,6 +146,8 @@ public class CommonProxyUtilities {
         CommandLine commandLine = new CommandLine("ffmpeg");
         commandLine.addArgument("-i");
         commandLine.addArgument(flvVideoFile);
+        commandLine.addArgument("-pix_fmt");
+        commandLine.addArgument("yuv420p");
         commandLine.addArgument(mp4VideoFile);
         DefaultExecutor defaultExecutor = new DefaultExecutor();
         ExecuteWatchdog executeWatchdog = new ExecuteWatchdog(10 * 1000);
